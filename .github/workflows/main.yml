@@ -11,7 +11,7 @@ env:
   file: consecutive.py 
   
 jobs:
-  check-python-version:
+  workflow-run-manually:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
