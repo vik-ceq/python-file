@@ -1,8 +1,10 @@
 #2. extract largest consecutive same character string from the given string 
-#input - "000111111100000000000111100011111"
-#output - "00000000000"
+#input - "010111"
+#output - "111"
 
-n="00011111110000000000011110001111"
+import sys
+
+n = sys.argv[1] 
 one=0
 count=1
 zero=0
