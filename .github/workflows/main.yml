@@ -1,5 +1,15 @@
 name: main
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      number:
+        description: 'Enter the number'
+        required: true
+        default: '10111'
+        
+env:
+  file: consecutive.py 
+  
 jobs:
   check-python-version:
     runs-on: ubuntu-latest
@@ -7,7 +17,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
         with:
-          python-version: '3.x'
-      #- run: python --version
+          python-version: '3.7'
+      - name: python version
+        run: python --version
+
+    
       - name: python script
-        run:  python python.py
+        run: python $file ${{ github.event.inputs.number }}
