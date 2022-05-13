@@ -8,7 +8,7 @@ on:
         default: '10111'
         
 env:
-  file: consecutive.py 
+  file: python.py 
   
 jobs:
   workflow-run-manually:
